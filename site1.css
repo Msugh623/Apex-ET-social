@@ -1,0 +1,277 @@
+body {
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 520px;
+    margin: 20px auto;
+    transition: all, 0.4s;
+}
+
+:window-inactive{
+    transition: all, 0.8s;
+}
+#post {
+    max-width: 480px;
+    transition: all, 0.4s;
+}
+
+#profiler {
+    width: fit-content;
+    height: 40px;
+    font-size: 12px;
+    transition: all, 0.4s;
+
+}
+
+hr {
+    border: 0.00000001px solid #1c293600;
+}
+
+html {
+    background: fixed #1e1f22;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all, 0.2s;
+}
+
+input:hover {
+    background-color: #0f4780;
+    transition: all, 0.2s;
+}
+
+input:active {
+    background-color: #3077bd;
+}
+
+button {
+    background-color: #1861aa;
+    height: 40px;
+    width: max-content;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: #153f69;
+    transition: all, 0.2s;
+}
+
+input {
+    background-color: #1861aa;
+    height: 30px;
+    width: max-content;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all, 0.2s;
+    border: none;
+    outline: none;
+    font-size: 80%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[id=postBtn] {
+    background-color: #22415a;
+    height: 40px;
+    width: 180px;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all, 0.2s;
+}
+
+input[type=text] {
+    height: 30px;
+    width: 200px;
+    background-color: #1e3b58;
+    transition: all, 0.2s;
+}
+
+input[value=✈] {
+    width: 33px;
+    height: 33px;
+    margin: auto 10px;
+    background-color: #1163b4;
+    transition: all, 0.2s;
+}
+
+input[value=✈]:hover {
+    background-color: #0f4780;
+}
+
+textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    transition: all, 0.2s;
+}
+
+#postBtn {
+    width: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all, 0.2s;
+    background-color: #106bc7;
+}
+
+#postBtn:hover {
+    background-color: #185088;
+}
+
+br input[class=postB] {
+    background-color: rgba(205, 219, 238, 0);
+    border: 0.2px groove rgb(0, 18, 39);
+    height: inherit;
+    height: 0.001px;
+    transition: all, 0.2s;
+}
+
+.logOut {
+    display: inline;
+    background-color: #14518385;
+}
+
+.proPic {
+    max-width: 40px;
+    border-radius: 50%;
+    transition: all, 0.3s;
+}
+
+.proName {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.proMail {
+    position: relative;
+    left: 50px;
+    bottom: 30px;
+    font-size: 6pxx;
+}
+
+#proFile {
+    transition: all, 0.1s;
+}
+
+.postB {
+    width: 80px;
+    height: 35px;
+    background-color: #1467bb;
+}
+
+.postSection {
+    background: #7a90b338;
+    height: fit-content;
+    border-radius: 6px;
+    border: 0.03px solid;
+    margin-top: 20px;
+    max-width: 485px;
+    transition: all, 0.2s;
+}
+
+.post {
+    margin-left: 10px;
+}
+
+.coMMent {
+    padding: 10px;
+    margin-top: 1px;
+    background-color: #7894b938;
+    margin: 10px 0px;
+    border-radius: 6px;
+    min-width: max-content;
+    max-width: 410px;
+    margin-left: 10px;
+    transition: all, 0.2s;
+}
+
+.comMent {
+    position: relative;
+    right: 10px;
+    padding: 10px;
+    margin-top: 1px;
+    background-color: #7894b938;
+    margin: 10px 0px;
+    border-radius: 6px;
+    min-width: max-content;
+    max-width: 410px;
+    margin-left: 10px;
+    transition: all, 0.2s;
+}
+
+.commentSection {
+    margin-left: 10px;
+    transition: all, 0.2s;
+}
+
+input[class=commentIn] {
+    background-color: #106bc7;
+}
+
+input[class=commentIn]:hover {
+    background-color: #0f4780;
+}
+
+input[class=commentIn]::placeholder {
+    color: rgba(4, 12, 20, 0.808);
+}
+
+#like {
+    display: stack;
+    max-height: 33px;
+    min-width: 70px;
+    margin: auto 5px auto auto;
+    transition: all, 0.2s;
+    text-align: left;
+}
+
+.like {
+    display: stack;
+    max-height: 33px;
+    min-width: 70px;
+    margin: auto 5px auto auto;
+    transition: all, 0.2s;
+    text-align: left;
+}
+
+.commentIn {
+    background-color: #106bc7;
+}
+
+.helpBlock{
+    font-size: smaller;
+}
+
+.top{
+    border-top: 2px groove #4682b4;
+    height: 20px;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    background: #14518300;
+    border-radius: 0px;
+    transition: all, 2s;
+    opacity: 0;
+}
+
+#profiler {
+    min-width: 70px;
+    max-width: 70px;
+}
+
+#modal {
+    position: fixed;
+    left: 200px;
+    right: 200px;
+    top: 200px;
+    bottom: 200px;
+    display: none;
+}
+
+#modalContent {
+    background-color: #222e42a6;
+    margin: auto;
+    border-radius: 5%;
+    width: 220px;
+}
