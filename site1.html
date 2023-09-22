@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex ET | social media</title>
-    <link rel="stylesheet" href="site1.css" type="text/css">
+    <link rel="stylesheet" href="./site1.css" type="text/css">
+    <link rel="stylesheet" href="./src/bootstrap.css" type="text/css">
     <style>
-        .appear {
+        body #bOdy .appear {
             background-color: rgba(0, 0, 0, 0);
             width: 0px;
             height: 0px;
@@ -17,47 +18,59 @@
             border: none;
             outline: none;
             transition: all, 0.3s;
+            margin: 0;
+            opacity: 0;
+            position: absolute;
+            left: -5px;
+            z-index: -1;
         }
     </style>
 </head>
 
 <body>
-    <div id="bOdy">
-        <div id="top"></div>
-        <input type="button" value="± What's on your mind" id="postBtn">
-        <input type="button" value="👱🏻‍♂️ Profile" id="profiler">
-        <button type="button" id="themeToggle">🔘 Toggle theme</button>
-        <a href="#"><button>Apex ET | Home</button></a>
-        <span id="proFile" class="appear">
-            <br>
-            <input id="Signin" type="button" class="appear" value="Sign in">
-            <input id="Signup" type="button" class="appear" value="Sign up">
-        </span>
+    <div id="top"></div>
+    <div id="bOdy" class="container-fluid">
+        <nav class="nav navbar">
+            <div class="navbar-body">
+                <input type="button" class="btn btn-primary" value="± What's on your mind" id="postBtn">
+                <input type="button" class="btn btn-primary" value="👱🏻‍♂️ Profile" id="profiler">
+                <button type="button" class="btn btn-primary" id="themeToggle">🔘 Toggle theme</button>
+                <a href="#">
+                    <button class="btn btn-primary">Apex ET | Home</button>
+                </a>
+                <div id="proFile" class="appear">
+                    <br>
+                    <input id="Signin" type="button" class="appear btn-primary" value="Sign in">
+                    <input id="Signup" type="button" class="appear btn-primary" value="Sign up">
+                </div>
+            </div>
+        </nav>
 
-        <form id="signInForm" class="appear" action="#">
-            <input type="name" id="Username" placeholder="User Name" required class="userName appear">
+        <form id="signInForm" class="appear row col-sm-6 container-fluid" action="#">
+            <input type="name" id="Username" placeholder="User Name" required class="userName appear form-control my-2">
             <br>
-            <input type="email" id="email" placeholder="E-mail" required class="appear">
+            <input type="email" id="email" placeholder="E-mail" required class="appear form-control my-2">
             <br>
-            <input type="password" id="password" placeholder="Password" required class="appear">
+            <input type="password" id="password" placeholder="Password" required class="appear form-control my-2">
             <br>
-            <input type="button" id="submit" value="Sign in" class="appear">
+            <input type="button" id="submit" value="Sign in" class="appear btn btn-primary">
         </form>
 
-        <form id="signUpForm" class="appear" action="#">
-            <input type="name" name="UserName" id="name" placeholder="User Name Here" required class="appear">
+        <form id="signUpForm" class="appear row col-sm-6 container-fluid" action="#">
+            <input type="name" name="UserName" id="name" placeholder="User Name Here" required class="appear  form-control my-2">
             <br>
-            <input type="email" id="email" placeholder="E-mail Here" required class="appear">
+            <input type="email" id="email" placeholder="E-mail Here" required class="appear  form-control my-2">
             <br>
-            <input type="password" id="Password" placeholder="Password Here" required class="appear">
+            <input type="password" id="Password" placeholder="Password Here" required class="appear  form-control my-2">
             <br>
 
-            <input type="button" id="suBmit" value="Sign up" class="appear">
+            <input type="button" id="suBmit" value="Sign up" class="appear btn btn-primary">
         </form>
 
         <div id="postControl" class="appear">
             <textarea name="" id="newPost" cols="57" rows="10" class="appear"></textarea><br>
-            <input type="file" class="file appear">
+            <input type="file" class="file appear btn btn-primary mb-2">
+            <br>
             <input id="postB" type="button" class="appear postB" value="post">
         </div>
 
@@ -94,7 +107,7 @@
                 <input type="button" id="aniDotD" class="ani" value="☮">
             </div>
         </div>
-        <a href="#top"><button class="top">🔺 Return to top</button></a>
+        <a href="#top"><button class="top p-0">🔺 Return to top</button></a>
     </center>
 
     <script src="typeScript23.js"></script>

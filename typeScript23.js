@@ -1,5 +1,5 @@
 document.getElementById("bOdy").style.display = "none";
-Load(500);
+Load(1800);
 setTimeout(() => {
     document.getElementById("bOdy").style.display = "block";
     let topRet = document.getElementsByClassName("top");
@@ -92,7 +92,7 @@ setTimeout(() => {
         postB.classList.toggle("appear");
         filePost[0].classList.toggle("appear");
 
-        profille.classList.toggle("appear");
+        profille.classList.add("appear");
 
         signIn.classList.add("appear");
         signUp.classList.add("appear");
@@ -103,25 +103,40 @@ setTimeout(() => {
             signInStuff[i].classList.add("appear");
             signUpStuff[i].classList.add("appear");
         }
-
-
     });
 
     postB.addEventListener("click", function () {
         signIn.classList.add("appear");
         signUp.classList.add("appear");
         profille.classList.remove("appear");
+        postControl.classList.add("appear");
+        newPost.classList.add("appear");
+        postB.classList.add("appear");
+        filePost[0].classList.add("appear");
+
+        profille.classList.add("appear");
+
+        signup.classList.add("appear");
+        signin.classList.add("appear");
+
 
         let Post = newPost.value.length
 
+        const fd = new FormData()
+        fd.append('img', filePost[0].value)
+
+        const src = filePost[0].value
+
+        console.log(src)
         if (filePost[0].value.length > 0) {
+            Load(600);
             setTimeout(() => {
                 filePost[0].classList.toggle("appear");
                 posts.innerHTML +=
                     '<div class="postSection">'
                     + '<p class="post">'
                     + '<div class="postPic">'
-                    + '<img src="' + filePost[0].value + '">'
+                    + `<img src='${src}' class='img-fluid'/>`
                     + '</div>'
                     + newPost.value
                     + '</p>' +
@@ -138,33 +153,27 @@ setTimeout(() => {
                     '</div>';
 
                 newPost.value = "";
-            }, 2200);
-        }
-        if (Post > 0) {
-            postControl.classList.toggle("appear");
-            newPost.classList.toggle("appear");
-            postB.classList.toggle("appear");
-            filePost[0].classList.toggle("appear");
-
+            }, 600);
+        } else if (Post > 0) {
             Load(2200);
 
             setTimeout(() => {
                 posts.innerHTML +=
-                '<div class="postSection">'
-                + '<p class="post">'
-                + newPost.value
-                + '</p>' +
-                '<div class="commentSection">' +
-                '<div class="commentInput">' +
-                '<hr>' +
-                '<button class="like">🤍 Like</button>' +
-                '<input type="text" class="coIn" placeholder="comment">' +
-                '<input type="button" value="✈" class="subMit">' +
-                '<input type="button" value="See Comments" class="seeComments">' +
-                '</div><div class="commentBox">' +
-                '</div>' +
-                '</div>' +
-                '</div>';
+                    '<div class="postSection">'
+                    + '<p class="post">'
+                    + newPost.value
+                    + '</p>' +
+                    '<div class="commentSection">' +
+                    '<div class="commentInput">' +
+                    '<hr>' +
+                    '<button class="like">🤍 Like</button>' +
+                    '<input type="text" class="coIn" placeholder="comment">' +
+                    '<input type="button" value="✈" class="subMit">' +
+                    '<input type="button" value="See Comments" class="seeComments">' +
+                    '</div><div class="commentBox">' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
                 newPost.value = "";
 
 
@@ -175,12 +184,12 @@ setTimeout(() => {
                 let seeComments = document.getElementsByClassName("seeComments");
                 let comments = [];
                 let likebt = document.getElementsByClassName("like");
-                let likeTracer = 1;
+                let likeTracer = false;
 
                 for (let i = 0; i < likebt.length; i++) {
                     likebt[i].addEventListener("click", function () {
-                        likeTracer++;
-                        if (likeTracer % 2 === 0) {
+                        likeTracer = !likeTracer;
+                        if (likeTracer) {
                             this.textContent = "🧡 Liked";
                         }
                         else {
@@ -247,7 +256,7 @@ setTimeout(() => {
                         seeco(seeComments[i], comMent);
                     });
                 }
-            }, 2100);
+            }, 2000);
         }
         else {
             alert("Error 403: No empty posts allowed");
@@ -259,7 +268,7 @@ setTimeout(() => {
         signIn.classList.toggle("appear");
         signUp.classList.toggle("appear");
         profille.classList.toggle("appear");
-        filePost[0].classList.toggle("appear");
+        filePost[0].classList.add("appear");
 
         postControl.classList.add("appear");
         newPost.classList.add("appear");
@@ -308,7 +317,7 @@ setTimeout(() => {
 
     signup.addEventListener("mousemove", function () {
         if (profile.signUpPassword.value.length < 5) {
-            signup.setAttribute("value", "Password too short, it should not be less than 5 characters");
+            signup.setAttribute("value", "Password too short");
             setTimeout(function () {
                 signup.setAttribute("value", "sign up");
             }, 2500);
@@ -326,17 +335,11 @@ setTimeout(() => {
                 leCheck = profile.signInEmail.value;
                 if (leCheck.indexOf("@gmail.com") > -1) {
                     profille.innerHTML =
-                        "<div id='profileBox'>" +
+                        "<div id='profileBox' class='d-flex mt-3'>" +
                         "<div class='profilePic'>" +
                         "<img src='src/profilePic.jpg' id='proPic' class='proPic'>" +
-                        "<span class='proName'>" +
-                        Username.value +
-                        "</span>" +
-                        "<br><span class='proMail'>" +
-                        profile.signInEmail.value +
-                        "</span>" +
-                        "</div>" +
-                        "</div>";
+                        "<div>"
+                    "</div>";
                     profiler.setAttribute("value", "👱🏻‍♂️ " + UserName.value);
                     profiler.setAttribute("value", Username.value);
                     profille.classList.remove("appear");
@@ -362,15 +365,9 @@ setTimeout(() => {
                 seCheck = profile.signUpEmail.value;
                 if (seCheck.indexOf("@gmail.com") > -1) {
                     profille.innerHTML =
-                        "<div id='profileBox'>" +
+                        "<div id='profileBox mt-3'>" +
                         "<div class='profilePic'>" +
                         "<img src='src/profilePic.jpg' id='proPic' class='proPic'>" +
-                        "<span class='proName'>" +
-                        UserName.value +
-                        "</span>" +
-                        "<br><span class='proMail'>" +
-                        profile.signUpEmail.value +
-                        "</span>" +
                         "</div>" +
                         "</div>";
                     profiler.setAttribute("value", "👱🏻‍♂️ " + UserName.value);
@@ -467,16 +464,15 @@ setTimeout(() => {
 
     themeBtn.addEventListener("click", function () {
         themeTracker++;
-
         if (themeTracker % 2 === 0) {
-            themeBtn.textContent = "⚫ Toggle theme";
-            themeMeta.setAttribute("content", "light")
-            html.style.background = "#D8D9DF"
-        }
-        else {
             themeBtn.textContent = "🔘 Toggle theme";
             themeMeta.setAttribute("content", "light dark")
             html.style.background = "#1e1f22"
+        }
+        else {
+            themeBtn.textContent = "⚫ Toggle theme";
+            themeMeta.setAttribute("content", "light")
+            html.style.background = "#efefef"
         }
     });
 
@@ -493,7 +489,7 @@ setTimeout(() => {
             }, 900);
         }, 5000);
     });
-}, 500);
+}, 800);
 
 
 // wierd loading animation 101
@@ -508,7 +504,6 @@ aniC.style.position = "relative";
 aniD.style.position = "relative";
 
 setInterval(() => {
-
     setTimeout(() => {
         aniA.style.bottom = "20px";
     }, 100);
@@ -534,7 +529,7 @@ setInterval(() => {
 function Load(x) {
     let load = document.getElementById("modal");
     load.style.display = "block";
-    setInterval(function () {
+    setTimeout(function () {
         load.style.display = "none";
     }, x);
 }
