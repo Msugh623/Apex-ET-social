@@ -94,6 +94,10 @@ input[value=✈] {
     transition: all, 0.2s;
 }
 
+.file{
+    display: block;
+}
+
 input[value=✈]:hover {
     background-color: #0f4780;
 }

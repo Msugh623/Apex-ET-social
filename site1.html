@@ -22,66 +22,69 @@
 </head>
 
 <body>
-    <div id="top"></div>
-    <input type="button" value="± What's on your mind" id="postBtn">
-    <input type="button" value="👱🏻‍♂️ Profile" id="profiler">
-    <button type="button" id="themeToggle">🔘 Toggle theme</button>
-    <a href="#"><button>Apex ET | Home</button></a>
-    <span id="proFile" class="appear">
-        <br>
-        <input id="Signin" type="button" class="appear" value="Sign in">
-        <input id="Signup" type="button" class="appear" value="Sign up">
-    </span>
+    <div id="bOdy">
+        <div id="top"></div>
+        <input type="button" value="± What's on your mind" id="postBtn">
+        <input type="button" value="👱🏻‍♂️ Profile" id="profiler">
+        <button type="button" id="themeToggle">🔘 Toggle theme</button>
+        <a href="#"><button>Apex ET | Home</button></a>
+        <span id="proFile" class="appear">
+            <br>
+            <input id="Signin" type="button" class="appear" value="Sign in">
+            <input id="Signup" type="button" class="appear" value="Sign up">
+        </span>
 
-    <form id="signInForm" class="appear" action="#">
-        <input type="name" id="Username" placeholder="User Name" required class="userName appear">
-        <br>
-        <input type="email" id="email" placeholder="E-mail" required class="appear">
-        <br>
-        <input type="password" id="password" placeholder="Password" required class="appear">
-        <br>
-        <input type="button" id="submit" value="Sign in" class="appear">
-    </form>
+        <form id="signInForm" class="appear" action="#">
+            <input type="name" id="Username" placeholder="User Name" required class="userName appear">
+            <br>
+            <input type="email" id="email" placeholder="E-mail" required class="appear">
+            <br>
+            <input type="password" id="password" placeholder="Password" required class="appear">
+            <br>
+            <input type="button" id="submit" value="Sign in" class="appear">
+        </form>
 
-    <form id="signUpForm" class="appear" action="#">
-        <input type="name" name="UserName" id="name" placeholder="User Name Here" required class="appear">
-        <br>
-        <input type="email" id="email" placeholder="E-mail Here" required class="appear">
-        <br>
-        <input type="password" id="Password" placeholder="Password Here" required class="appear">
-        <br>
+        <form id="signUpForm" class="appear" action="#">
+            <input type="name" name="UserName" id="name" placeholder="User Name Here" required class="appear">
+            <br>
+            <input type="email" id="email" placeholder="E-mail Here" required class="appear">
+            <br>
+            <input type="password" id="Password" placeholder="Password Here" required class="appear">
+            <br>
 
-        <input type="button" id="suBmit" value="Sign up" class="appear">
-    </form>
+            <input type="button" id="suBmit" value="Sign up" class="appear">
+        </form>
 
-    <div id="postControl" class="appear">
-        <textarea name="" id="newPost" cols="57" rows="10" class="appear"></textarea><br>
-        <input id="postB" type="button" class="appear postB" value="post">
-    </div>
+        <div id="postControl" class="appear">
+            <textarea name="" id="newPost" cols="57" rows="10" class="appear"></textarea><br>
+            <input type="file" class="file appear">
+            <input id="postB" type="button" class="appear postB" value="post">
+        </div>
 
-    <div id="postSection" class="postSection">
-        <p id="post" class="post">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate distinctio ea sed nemo, a sunt vero sint
-            soluta vitae fugiat non itaque magnam totam, doloremque architecto fuga perferendis eos cumque!
-        </p>
+        <div id="postSection" class="postSection">
+            <p id="post" class="post">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate distinctio ea sed nemo, a sunt vero
+                sint
+                soluta vitae fugiat non itaque magnam totam, doloremque architecto fuga perferendis eos cumque!
+            </p>
 
-        <div id="commentSection" class="commentSection">
-            <div id="commentInput">
-                <hr>
-                <button id="like">🤍 Like</button>
-                <input type="text" id="commentIn" placeholder="comment">
-                <input type="button" value="✈" id="submit">
-                <input type="button" value="See Comments" id="seeComments">
+            <div id="commentSection" class="commentSection">
+                <div id="commentInput">
+                    <hr>
+                    <button id="like">🤍 Like</button>
+                    <input type="text" id="commentIn" placeholder="comment">
+                    <input type="button" value="✈" id="submit">
+                    <input type="button" value="See Comments" id="seeComments">
+                </div>
+            </div>
+            <div id="commentBox">
+
             </div>
         </div>
-        <div id="commentBox">
+        <div type="text" id="posts">
 
         </div>
     </div>
-    <div type="text" id="posts">
-
-    </div>
-
     <center>
         <div id="modal">
             <div id="modalContent">
